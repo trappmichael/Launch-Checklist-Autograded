@@ -44,13 +44,9 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 
         alert("All fields are required!");
 
-        return list.preventDefault();
-
     } else if (validateInput(pilot) === "Is a Number" || validateInput(copilot) === "Is a Number" || validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel) === "Not a Number") {
 
         alert("Enter valid information in each field!");
-        
-        return list.preventDefault();
 
     } else if (fuelLevel < 10000 && cargoLevel <= 10000) {
 
@@ -66,8 +62,6 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
         h2LaunchStatus.style.color = "red";
         faultyItems.style.visibility = "visible";
 
-        return list.preventDefault();
-
     } else if (cargoLevel > 10000 && fuelLevel >= 10000) {
 
         liPilot.innerHTML = `
@@ -81,8 +75,6 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
         h2LaunchStatus.innerHTML = "Shuttle Not Ready for Launch";
         h2LaunchStatus.style.color = "red";
         faultyItems.style.visibility = "visible";
-
-        return list.preventDefault();
 
     } else if (cargoLevel > 10000 && fuelLevel <= 10000) {
 
@@ -98,8 +90,6 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
         h2LaunchStatus.style.color = "red";
         faultyItems.style.visibility = "visible";
 
-        return list.preventDefault();
-
     } else {
 
         liPilot.innerHTML = `
@@ -112,8 +102,6 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
         liCargoStatus.innerHTML = "Cargo mass low enough for launch";
         h2LaunchStatus.style.color = "green";
         h2LaunchStatus.innerHTML = "Shuttle is Ready for Launch";
-
-        return list.preventDefault();
 
     };
 
